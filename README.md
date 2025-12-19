@@ -35,3 +35,9 @@ Validate configuration loading without touching external services:
 ```
 npm run dev:test-0.2-config
 ```
+
+## Dev Test Script (Discord Logger)
+Validate Discord logger formatting using a fake webhook sender (no network calls):
+```
+npm run dev:test-discord
+```
