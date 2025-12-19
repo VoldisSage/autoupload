@@ -1,0 +1,25 @@
+{
+  "twitch": {
+    "clientId": "YOUR_TWITCH_CLIENT_ID",
+    "clientSecret": "YOUR_TWITCH_CLIENT_SECRET",
+    "broadcasterId": "YOUR_TWITCH_BROADCASTER_ID",
+    "pollIntervalSeconds": 30
+  },
+  "obs": {
+    "recordingsPath": "C:\\Recordings\\OBS"
+  },
+  "openai": {
+    "apiKey": "YOUR_OPENAI_API_KEY",
+    "model": "gpt-4o-mini",
+    "promptVersion": "v1"
+  },
+  "youtube": {
+    "clientId": "YOUR_YOUTUBE_CLIENT_ID",
+    "clientSecret": "YOUR_YOUTUBE_CLIENT_SECRET",
+    "redirectUri": "http://localhost:3000/oauth2callback",
+    "refreshToken": "YOUR_YOUTUBE_REFRESH_TOKEN"
+  },
+  "discord": {
+    "webhookUrl": "YOUR_DISCORD_WEBHOOK_URL"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "project_name": "StreamerTools AutoUploader",
+  "version": "1.0.0",
+  "description": "Manifest file for Codex-based development workflow.",
+  "guidelines": {
+    "master": "instructions/master.md",
+    "tasks_directory": "instructions/tasks/"
+  },
+  "enforcement": {
+    "load_master_on_every_prompt": true,
+    "task_files_are_authoritative": true,
+    "require_tests_for_every_task": true,
+    "require_definition_of_done": true
+  },
+  "task_execution_protocol": {
+    "steps": [
+      "1. Load master guidelines first.",
+      "2. Load task file from instructions/tasks/*.md.",
+      "3. Parse DoD and test requirements.",
+      "4. Modify or generate files strictly within the project structure.",
+      "5. Generate required test scripts.",
+      "6. Produce a summary of created/changed files.",
+      "7. Await human/agent validation before proceeding."
+    ]
+  },
+  "code_constraints": {
+    "allowed_languages": ["TypeScript", "JavaScript"],
+    "preferred_language": "TypeScript",
+    "allowed_dependencies": [
+      "openai",
+      "googleapis",
+      "node-fetch",
+      "fs",
+      "path"
+    ],
+    "disallowed_patterns": [
+      "default exports",
+      "blocking loops",
+      "unused dependencies",
+      "opaque side effects"
+    ]
+  },
+  "behaviors": {
+    "on_ambiguity": "request_clarification",
+    "on_error": "explain_and_wait",
+    "on_missing_task": "throw_error",
+    "on_missing_requirement": "stop_and_warn"
+  }
+}
